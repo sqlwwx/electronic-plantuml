@@ -15,7 +15,7 @@ body {
   <div class="window-content">
     <div class="pane-group">
       <div class="pane sidebar">
-        <textarea class="form-control" rows="100" v-model="uml"></textarea>
+        <textarea class="form-control" rows="100" v-model="uml" lazy></textarea>
       </div>
       <div class="pane uml-view">
         <img class="uml-img" :src="'http://www.plantuml.com/plantuml/png/' + encodedUml">
