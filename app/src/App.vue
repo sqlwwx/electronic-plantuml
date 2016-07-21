@@ -24,6 +24,9 @@ body {
     </div>
   </div>
   <footer class="toolbar toolbar-footer">
+    <div class="toolbar-actions pull-left">
+      <button @click="saveCode" class="btn btn-primary pull-right">复制代码</button>
+    </div>
     <div class="toolbar-actions">
       <button @click="saveURL" class="btn btn-primary pull-right">复制图片地址</button>
     </div>
@@ -33,7 +36,6 @@ body {
 
 <script>
 import plantumlEncoder from 'plantuml-encoder'
-import { clipboard } from 'electron'
 
 export default {
   data () {
@@ -49,12 +51,22 @@ export default {
   methods: {
     saveURL () {
       try {
-        clipboard.writeText('http://www.plantuml.com/plantuml/png/' + this.encodedUml)
+        this.$electron.clipboard.writeText('http://www.plantuml.com/plantuml/png/' + this.encodedUml)
         /* eslint-disable no-new */
         new Notification('复制UML图片地址成功')
       } catch (error) {
         /* eslint-disable no-new */
         new Notification('复制UML图片地址失败')
+      }
+    },
+    saveCode () {
+      try {
+        this.$electron.clipboard.writeText('@startuml\n' + this.uml + '\n@enduml')
+        /* eslint-disable no-new */
+        new Notification('复制代码成功')
+      } catch (error) {
+        /* eslint-disable no-new */
+        new Notification('复制代码失败')
       }
     }
   }
