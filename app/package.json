@@ -1,0 +1,12 @@
+{
+  "name": "electronic-plantuml",
+  "version": "1.0.0",
+  "description": "",
+  "main": "electron.js",
+  "dependencies": {
+    "vue": "^1.0.24"
+  },
+  "devDependencies": {},
+  "author": "sqlwwx <wwx_2012@hotmail.com>",
+  "license": "ISC"
+}
