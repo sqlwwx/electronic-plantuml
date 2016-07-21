@@ -25,6 +25,7 @@ function createWindow () {
     width: 1000
   })
 
+  require('./windows/menu.js')
   mainWindow.loadURL(config.url)
 
   if (process.env.NODE_ENV === 'development') {
