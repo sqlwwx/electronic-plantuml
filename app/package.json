@@ -4,7 +4,10 @@
   "description": "",
   "main": "electron.js",
   "dependencies": {
-    "vue": "^1.0.24"
+    "photon": "https://github.com/sqlwwx/photon/tarball/master",
+    "plantuml-encoder": "^1.2.3",
+    "vue": "^1.0.24",
+    "vue-lazyload": "^0.4.3"
   },
   "devDependencies": {},
   "author": "sqlwwx <wwx_2012@hotmail.com>",
