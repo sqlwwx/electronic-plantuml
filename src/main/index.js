@@ -25,6 +25,8 @@ function createWindow () {
     width: 1000
   })
 
+  require('./menu.js')
+
   mainWindow.loadURL(winURL)
 
   mainWindow.on('closed', () => {
