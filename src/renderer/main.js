@@ -1,4 +1,5 @@
 import Vue from 'vue'
+import 'photon/dist/css/photon.css'
 
 import App from './App'
 
